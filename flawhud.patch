@@ -1,0 +1,103 @@
+diff --git a/resource/ui/hudplayerclass.res b/resource/ui/hudplayerclass.res
+index e4c5dba..99a4914 100644
+--- a/resource/ui/hudplayerclass.res
++++ b/resource/ui/hudplayerclass.res
+@@ -10,8 +10,8 @@
+ 		"zpos"			"1"
+ 		"wide"			"f0"
+ 		"tall"			"480"
+-		"visible"		"1"
+-		"enabled"		"1"
++		"visible"		"0"
++		"enabled"		"0"
+ 	}
+ 	
+ 	"PlayerStatusClassImage"
+diff --git a/scripts/hudanimations_custom.txt b/scripts/hudanimations_custom.txt
+index 03853f7..b75ccce 100644
+--- a/scripts/hudanimations_custom.txt
++++ b/scripts/hudanimations_custom.txt
+@@ -59,15 +59,15 @@ event HudHealthDyingPulseStop
+ 
+ event HudLowAmmoPulse
+ {
+-	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
+-	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
++//	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
++//	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
+ 
+-//	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
+-//	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
+-//	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
+-//	Animate	AmmoInReserve				FgColor		"LowAmmoPulse"		Linear 0.2 0.6
+-//	Animate	AmmoNoClip					FgColor		"LowAmmo"			Linear 0.0 0.2
+-//	Animate	AmmoNoClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
++	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
++	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
++	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
++	Animate	AmmoInReserve				FgColor		"LowAmmoPulse"		Linear 0.2 0.6
++	Animate	AmmoNoClip					FgColor		"LowAmmo"			Linear 0.0 0.2
++	Animate	AmmoNoClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
+ 
+ 	RunEvent HudLowAmmoPulseLoop		0.4
+ }
+@@ -173,4 +173,4 @@ event TeamStatus_PlayerAlive
+ 
+ event CompetitiveGame_LowerChatWindow { }
+ event CompetitiveGame_RestoreChatWindow { }
+-event HudTournament_MoveChatWindow { }
+\ No newline at end of file
++event HudTournament_MoveChatWindow { }
+diff --git a/scripts/hudlayout.res b/scripts/hudlayout.res
+index 8b82314..c9c96b8 100644
+--- a/scripts/hudlayout.res
++++ b/scripts/hudlayout.res
+@@ -151,7 +151,7 @@
+ 		"visible"			"1"
+ 		"enabled"			"1"
+ 		"xpos"				"0"
+-		"ypos"				"c38"
++		"ypos"				"c50"
+ 		"wide"				"f0"
+ 		"tall"				"300"
+ 	}
+@@ -301,7 +301,7 @@
+ 		"visible" 				"0"
+ 		"enabled" 				"1"
+ 		"xpos"					"c-126"
+-		"ypos"					"265"
++		"ypos"					"c-80"
+ 		"wide"					"200"
+ 		"tall"					"50"
+ 		"priority"				"40"
+@@ -325,7 +325,7 @@
+ 		"visible" 				"0"
+ 		"enabled" 				"1"
+ 		"xpos"					"c-126"
+-		"ypos"					"355"
++		"ypos"					"c20"
+ 		"wide"					"200"
+ 		"tall"					"50"
+ 		"priority"				"35"
+@@ -493,18 +493,18 @@
+ 		"fieldName" 			"HudDeathNotice"
+ 		"visible" 				"1"
+ 		"enabled" 				"1"
+-		"xpos"	 				"r635"
++		"xpos"	 				"r875"
+ 		"ypos"	 				"25"
+ 		"wide"	 				"628"
+ 		"tall"	 				"468"
+-		"MaxDeathNotices"		"5"
++		"MaxDeathNotices"		"8"
+ 		"IconScale"				"0.35"
+ 		"LineHeight"			"12"
+ 		"LineSpacing"			"0"
+ 		"CornerRadius"			"3"
+ 		"RightJustify"			"1"
+ 		"TextFont"				"FontRegular11"
+-		"TextFont_minmode"		"Transparent"
++		//"TextFont_minmode"		"Transparent"
+ 		"TeamBlue"				"HUDBlueTeamSolid"
+ 		"TeamRed"				"HUDRedTeamSolid"
+ 		"IconColor"				"White"
