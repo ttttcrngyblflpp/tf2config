@@ -1,3 +1,70 @@
+diff --git a/resource/ui/hudmediccharge.res b/resource/ui/hudmediccharge.res
+index 6d1dc6a..628c5a8 100644
+--- a/resource/ui/hudmediccharge.res
++++ b/resource/ui/hudmediccharge.res
+@@ -22,10 +22,10 @@
+ 		"ControlName"		"CExLabel"
+ 		"fieldName"			"ChargeLabel"
+ 		"xpos"				"c-60"
+-		"ypos"				"30"
++		"ypos"				"0"
+ 		"zpos"				"2"
+ 		"wide"				"120"
+-		"tall"				"42"
++		"tall"				"15"
+ 		"autoResize"		"1"
+ 		"pinCorner"			"2"
+ 		"visible"			"1"
+@@ -35,19 +35,19 @@
+ 		"textAlignment"		"center"
+ 		"dulltext"			"0"
+ 		"brighttext"		"0"
+-		"font"				"FontBold22"
+-		"fgcolor"			"White"
++		"font"				"FontBold12"
++		"fgcolor"			"0 255 0 255"
+ 	}
+ 
+ 	"ChargeLabelShadow"
+ 	{
+ 		"ControlName"		"CExLabel"
+ 		"fieldName"			"ChargeLabelShadow"
+-		"xpos"				"-2"
+-		"ypos"				"-2"
++		"xpos"				"-1"
++		"ypos"				"-1"
+ 		"zpos"				"1"
+ 		"wide"				"120"
+-		"tall"				"42"
++		"tall"				"15"
+ 		"autoResize"		"1"
+ 		"pinCorner"			"2"
+ 		"visible"			"1"
+@@ -57,7 +57,7 @@
+ 		"textAlignment"		"center"
+ 		"dulltext"			"0"
+ 		"brighttext"		"0"
+-		"font"				"FontBold22"
++		"font"				"FontBold12"
+ 		"fgcolor"			"ShadowBlack"
+ 
+ 		"pin_to_sibling"		"ChargeLabel"
+@@ -111,7 +111,7 @@
+ 		"fieldName"			"ChargeMeter"
+ 		"font"				"Default"
+ 		"xpos"				"0"
+-		"ypos"				"-1"
++		"ypos"				"87"
+ 		"zpos"				"1"
+ 		"wide"				"120"
+ 		"tall"				"10"
+@@ -260,4 +260,4 @@
+ 		"scaleImage"		"1"
+ 		"pin_to_sibling"	"ResistIconAnchor"
+ 	}
+-}
+\ No newline at end of file
++}
 diff --git a/resource/ui/hudplayerclass.res b/resource/ui/hudplayerclass.res
 index e4c5dba..99a4914 100644
 --- a/resource/ui/hudplayerclass.res
@@ -13,6 +80,17 @@ index e4c5dba..99a4914 100644
  	}
  	
  	"PlayerStatusClassImage"
+diff --git a/resource/ui/targetid.res b/resource/ui/targetid.res
+index 50712f0..116d71d 100644
+--- a/resource/ui/targetid.res
++++ b/resource/ui/targetid.res
+@@ -290,4 +290,4 @@
+ 		"scaleImage"		"1"
+ 		"color_outline"		"HudTimerProgressInActive"
+ 	}
+-}
+\ No newline at end of file
++}
 diff --git a/scripts/hudanimations_custom.txt b/scripts/hudanimations_custom.txt
 index 03853f7..b75ccce 100644
 --- a/scripts/hudanimations_custom.txt
@@ -49,7 +127,7 @@ index 03853f7..b75ccce 100644
 \ No newline at end of file
 +event HudTournament_MoveChatWindow { }
 diff --git a/scripts/hudlayout.res b/scripts/hudlayout.res
-index 8b82314..c9c96b8 100644
+index 8b82314..62fda07 100644
 --- a/scripts/hudlayout.res
 +++ b/scripts/hudlayout.res
 @@ -151,7 +151,7 @@
@@ -57,7 +135,7 @@ index 8b82314..c9c96b8 100644
  		"enabled"			"1"
  		"xpos"				"0"
 -		"ypos"				"c38"
-+		"ypos"				"c50"
++		"ypos"				"c15"
  		"wide"				"f0"
  		"tall"				"300"
  	}
