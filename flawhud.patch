@@ -92,7 +92,7 @@ index 50712f0..116d71d 100644
 \ No newline at end of file
 +}
 diff --git a/scripts/hudanimations_custom.txt b/scripts/hudanimations_custom.txt
-index 03853f7..b75ccce 100644
+index 83ccf84..b75ccce 100644
 --- a/scripts/hudanimations_custom.txt
 +++ b/scripts/hudanimations_custom.txt
 @@ -59,15 +59,15 @@ event HudHealthDyingPulseStop
@@ -101,15 +101,16 @@ index 03853f7..b75ccce 100644
  {
 -	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
 -	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
-+//	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
-+//	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
- 
+-
 -//	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 -//	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoInReserve				FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 -//	Animate	AmmoNoClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoNoClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
++//	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
++//	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
++
 +	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 +	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 +	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
@@ -119,15 +120,8 @@ index 03853f7..b75ccce 100644
  
  	RunEvent HudLowAmmoPulseLoop		0.4
  }
-@@ -173,4 +173,4 @@ event TeamStatus_PlayerAlive
- 
- event CompetitiveGame_LowerChatWindow { }
- event CompetitiveGame_RestoreChatWindow { }
--event HudTournament_MoveChatWindow { }
-\ No newline at end of file
-+event HudTournament_MoveChatWindow { }
 diff --git a/scripts/hudlayout.res b/scripts/hudlayout.res
-index 8b82314..62fda07 100644
+index 8b82314..da00d4b 100644
 --- a/scripts/hudlayout.res
 +++ b/scripts/hudlayout.res
 @@ -151,7 +151,7 @@
@@ -144,7 +138,7 @@ index 8b82314..62fda07 100644
  		"enabled" 				"1"
  		"xpos"					"c-126"
 -		"ypos"					"265"
-+		"ypos"					"c-80"
++		"ypos"					"c0"
  		"wide"					"200"
  		"tall"					"50"
  		"priority"				"40"
@@ -153,7 +147,7 @@ index 8b82314..62fda07 100644
  		"enabled" 				"1"
  		"xpos"					"c-126"
 -		"ypos"					"355"
-+		"ypos"					"c20"
++		"ypos"					"c30"
  		"wide"					"200"
  		"tall"					"50"
  		"priority"				"35"
