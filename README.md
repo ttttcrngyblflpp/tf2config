@@ -111,20 +111,7 @@ scoreboard. The fewer players there are, the more important the scoreboard is to
 which is to say that it doesn't really matter at all in 12v12. If on a normal keyboard, Spacebar
 should be crouch and probably Alt for scoreboard makes sense.
 
-Here are the class-specific bindings in graphical form:
-
-Scout:
-
-![scout](img/scout.png)
-
-Pyro:
-
-![pyro](img/pyro.png)
-
-Medic:
-
-![medic](img/medic.png)
-
+Below are the class-specific bindings in graphical form.
 Note that depending on how you defined `a[0-5]`, or even any of the other keys, it'll probably look
 somewhat different to these, but you shold get the gist. There are really only two exotic binds that
 you can't normally do: `slot[1-3]attack` is a key which switches to a particular slot (primary,
@@ -134,6 +121,34 @@ the right thing (and if you're already using the right slot, it'll attack). Also
 key which, while held, switches to your secondary, but will switch back to whatever weapon you have
 previously out upon release. This is useful for the "combo pyro" playstyle, which requires many
 switches between flamethrower and the shotgun secondary.
+
+Scout:
+
+![scout](img/scout.png)
+
+Pyro:
+
+![pyro](img/pyro.png)
+
+The pyro layout is motivated by the following:
+
+- The biggest problem for pyro: it uses melee probably more than any other class! The axtinguisher
+  is used to combo (light someone on fire for afterburn, hit them to do big damage), and the
+  powerjack is often switched to-and-from to get its speed boost for jumps. If you're willing to
+  sacrifice a bit of melee ability, a better layout would be to bind `a0=slot1attack` and
+  `m1=slot2attack`. This has the advantage that you can hold `a0` to attack with the flamethrower,
+  and you can still switch between the flamethrower and the secondary quickly; but since `a0` is
+  held to attack with the flamethrower, switching to melee is slower.
+- Airblasting requires `+attack2` to be bound to a mouse button. An alternative may be to use
+  `slot1attack2` instead, but the detonator (which is a secondary) requires `+attack2` for det-jumps
+  as well.
+- Pyro can detonator jump, but is also the class that probably benefits the most from bunny hopping,
+  so jump is aliased to a button for det-jumps.
+
+Medic:
+
+![medic](img/medic.png)
+
 
 ## Probably delete `scripts/tf_weapon*.txt`
 
