@@ -137,28 +137,59 @@ Scout:
 
 ![scout](img/scout.png)
 
+The scout layout doesn't really have to compromise on anything, although a three-button mouse rather
+than one with a scroll wheel would probably be ideal:
+
+- The only two actions requiring precise timing are attacking with the primary and jumping. Note
+  that scout cannot bind jump to a scroll wheel due to the air dash mechanic.
+- Secondary and melee use switch-to-and-attack binds. The pistols are continuously fired, and rared
+  need to fire individually. Melee doesn't matter all that much.
+- Being able to move backwards on `a0` is useful since the majority of the time a scout is using the
+  scattergun anyway, and movement is important for scout.
+- `+attack2` on middle click is sometimes needed for melee and also the soda popper. Not an ideal
+  button to bind but rarely used anyway.
+
 Pyro:
 
 ![pyro](img/pyro.png)
 
-The pyro layout is motivated by the following:
+The pyro layout is actually just stock... which is weird, but here are the reasons why:
 
-- The biggest problem for pyro: it uses melee probably more than any other class! The axtinguisher
-  is used to combo (light someone on fire for afterburn, hit them to do big damage), and the
-  powerjack is often switched to-and-from to get its speed boost for jumps. If you're willing to
-  sacrifice a bit of melee ability, a better layout would be to bind `a0=slot1attack` and
-  `m1=slot2attack`. This has the advantage that you can hold `a0` to attack with the flamethrower,
-  and you can still switch between the flamethrower and the secondary quickly; but since `a0` is
-  held to attack with the flamethrower, switching to melee is slower.
-- Airblasting requires `+attack2` to be bound to a mouse button. An alternative may be to use
-  `slot1attack2` instead, but the detonator (which is a secondary) requires `+attack2` for det-jumps
-  as well.
+- Pyro has many combos that it can pull off but all of them require rapid weapon switches:
+  - Powerjack jumping involves switching to melee immediately before jumping, and switching to
+    primary or secondary mid-jump to do damage.
+  - The degreaser's switch speed bonus when paired with the panic attack (and to some degree the
+    stock shotgun as well) allows one to deal damage with "lingering flames" and burst hitscan
+    damage simultaneously.
+  - The three flare guns and the axtinguisher are all activated on burning targets, and combo from
+    lighting someone on fire.
+  As a result of all of this, it's really important to be able to switch between weapons quickly.
+  This means that the only viable way to use slot-and-attack binds is to have `mouse1`, `mouse2` and
+  a keyboard button bound, but the problem with that is needing to airblast with `+attack2`. Thus
+  the compromise is simply the stock layout of three buttons to switch between the weapons, and the
+  two mouse buttons to attack.
 - Pyro can detonator jump, but is also the class that probably benefits the most from bunny hopping,
   so jump is aliased to a button for det-jumps.
 
 Medic:
 
 ![medic](img/medic.png)
+
+Some notes on the medic layout:
+
+- Medic doesn't really need `+attack2` for anything other than popping uber, so it can get away with
+  primary+attack and secondary+attack on mouse buttons, and melee+attack on the usual `a2`.
+- Medic doesn't have a blast jumping ability, so jumping with scroll wheel is fine.
+- Movement for medic is quite important, and since both weapons are accessible via the mouse
+  buttons, `a0` is an alias for moving backwards so all four movement directions are accessible most
+  of the time.
+- The fake zoom bind may be useful for aiming long-distance crossbow shots, although using crossbow
+  at such ranges generally requires co-operation from your team mate to actually stand still. An
+  alternative bind for the fake zoom would be a thumb button, since it's quite unlikely that you
+  would be airborne (either because of a jump or being blasted by projectiles) when trying to make a
+  shot with the crossbow that would actually need zoom.
+- Popping uber, and faking uber and using a random voiceline to mask uber simply fill the rest of
+  the available keys.
 
 
 ## Probably delete `scripts/tf_weapon*.txt`
