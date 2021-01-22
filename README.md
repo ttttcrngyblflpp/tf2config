@@ -58,11 +58,22 @@ Once you've done this, there's an optional step where there should be a patch fi
 `tf2config/flawhud.patch`. You can simply `git apply` it against `tf/custom/flawhud` (and maybe
 resolve any conflicts that come up) to get a few of my custom changes. 
 
-One thing that you probably want to change is in `flawhud/scripts/hudlayout.res`, grep for the
-string "HudDeathNotice". This section defines the killfeed in the HUD, and my patch includes an
-optimization which moves it further towards the centre of the screen as I'm on 21:9. If you're using
-16:9, it may overlap with some other elements sometimes (not the biggest of deals), but you can
-change the xpos value back to the default of "r635" to put it where the HUD intended it to be.
+A list of (possibly out-of-date) changes that I've made:
+
+- Used some commented out lines (seems like this is an intended optional change maybe?) to make it
+  so that low ammo has the text in red rather than making the background red.
+- Hid the "player model" that's shown on the bottom left which shows your player model. The player
+  model gives you the minimally useful information of which team you're on and maybe which gun you
+  have out, but it looks very out-of-place in this "minimal" HUD.
+- Centered the killfeed. The killfeed gives pretty important information, and so should be centered.
+  It has been moved to the location it would be in as if your screen were 4:3, regardless of actual
+  screen width.
+- Killfeed shows up to 8 entries rather than 5. More information is better than less information (up
+  to a degree, but 8 is the max and is fine).
+- Moved medic HUD elements so that from the crosshair down the elements are: ubercharge percentage
+  in a small font but bright green, primary target ID (the health of the friendly you're looking
+  at), secondary target ID (the health and ammo of the person you're healing), and then ubercharge
+  bar.
 
 ## Make changes to `autoexec.cfg` and `reset.cfg`
 

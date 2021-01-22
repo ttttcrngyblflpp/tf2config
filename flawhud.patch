@@ -121,7 +121,7 @@ index 83ccf84..b75ccce 100644
  	RunEvent HudLowAmmoPulseLoop		0.4
  }
 diff --git a/scripts/hudlayout.res b/scripts/hudlayout.res
-index 8b82314..da00d4b 100644
+index 8b82314..ed498e5 100644
 --- a/scripts/hudlayout.res
 +++ b/scripts/hudlayout.res
 @@ -151,7 +151,7 @@
@@ -156,7 +156,7 @@ index 8b82314..da00d4b 100644
  		"visible" 				"1"
  		"enabled" 				"1"
 -		"xpos"	 				"r635"
-+		"xpos"	 				"r875"
++		"xpos"	 				"c-314"
  		"ypos"	 				"25"
  		"wide"	 				"628"
  		"tall"	 				"468"
