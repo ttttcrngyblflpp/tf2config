@@ -61,10 +61,16 @@ resolve any conflicts that come up) to get a few of my custom changes.
 A list of (possibly out-of-date) changes that I've made:
 
 - Used some commented out lines (seems like this is an intended optional change maybe?) to make it
-  so that low ammo has the text in red rather than making the background red.
+  so that low ammo and low HP has the text in red rather than making the background red. Also
+  changed the red color used to be brighter (it still kind of upsets me that the red is actually
+  less readable than the white but whatever...)
+- Moved health and ammo further up and towards the centre. You may want to reverse this change if
+  you sit sufficiently far away from your monitor, I think the optimal place for these are as far
+  out as possible while still being readable using peripheral vision while staring at the crosshair.
 - Hid the "player model" that's shown on the bottom left which shows your player model. The player
   model gives you the minimally useful information of which team you're on and maybe which gun you
-  have out, but it looks very out-of-place in this "minimal" HUD.
+  have out, but it looks very out-of-place in this "minimal" HUD. Apparently useful for playing spy
+  due to the disguise mechanic, so you may want to reverse it.
 - Centered the killfeed. The killfeed gives pretty important information, and so should be centered.
   It has been moved to the location it would be in as if your screen were 4:3, regardless of actual
   screen width.

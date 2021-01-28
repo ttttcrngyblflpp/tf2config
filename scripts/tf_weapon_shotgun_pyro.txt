@@ -79,11 +79,11 @@ fWeaponData
 		}
 		"crosshair"
 		{
-				"file"		"vgui/replay/thumbnails/scattergun"
+				"file"		"vgui/replay/thumbnails/panicattack"
 				"x"		"0"
 				"y"		"0"
-				"width"		"512"
-				"height"	"512"
+				"width"		"256"
+				"height"	"256"
 		}
 		"autoaim"
 		{

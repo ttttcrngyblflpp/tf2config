@@ -1,5 +1,96 @@
+diff --git a/resource/scheme/clientscheme_colors.res b/resource/scheme/clientscheme_colors.res
+index ac9f11d..a9b6f94 100644
+--- a/resource/scheme/clientscheme_colors.res
++++ b/resource/scheme/clientscheme_colors.res
+@@ -29,10 +29,10 @@ Scheme
+ 		// Gameplay
+ 		"Overheal"					"0 170 127 255"
+ 		"OverhealPulse"				"0 170 127 200"
+-		"LowHealth"					"190 20 20 255"
+-		"LowHealthPulse"			"190 20 20 200"
+-		"LowAmmo"					"190 20 20 255"
+-		"LowAmmoPulse"				"190 20 20 200"
++		"LowHealth"					"255 20 20 255"
++		"LowHealthPulse"			"255 20 20 200"
++		"LowAmmo"					"255 20 20 255"
++		"LowAmmoPulse"				"255 20 20 200"
+ 		"PositiveValue"				"0 170 127 255"
+ 		"NegativeValue"				"190 20 20 200"
+ 		"TargetHealth"				"0 170 127 255"
+diff --git a/resource/ui/hudammoweapons.res b/resource/ui/hudammoweapons.res
+index 3dde886..3c23b18 100644
+--- a/resource/ui/hudammoweapons.res
++++ b/resource/ui/hudammoweapons.res
+@@ -133,4 +133,4 @@
+ 		"labelText"			"%Ammo%"
+ 		"pin_to_sibling"	"AmmoNoClip"
+ 	}
+-}
+\ No newline at end of file
++}
+diff --git a/resource/ui/huddamageaccount.res b/resource/ui/huddamageaccount.res
+index 0a05739..fff763b 100644
+--- a/resource/ui/huddamageaccount.res
++++ b/resource/ui/huddamageaccount.res
+@@ -8,7 +8,7 @@
+ 		"delta_item_end_y"		"0"
+ 		"PositiveColor"			"TargetHealth"
+ 		"NegativeColor"			""	// Unused
+-		"delta_lifetime"		"2"
++		"delta_lifetime"		"4"
+ 		"delta_item_font"		"FontBold20Outline"
+ 		"delta_item_font_big"	"FontBold20Outline"
+ 	}
+@@ -17,8 +17,8 @@
+ 	{
+ 		"ControlName"			"CExLabel"
+ 		"fieldName"				"DamageAccountValue"
+-		"xpos"					"c-120"
+-		"ypos"					"c70"
++		"xpos"					"c-100"
++		"ypos"					"c50"
+ 		"zpos"					"2"
+ 		"wide"					"60"
+ 		"tall"					"26"
+diff --git a/resource/ui/huditemeffectmeter.res b/resource/ui/huditemeffectmeter.res
+index 3a9cc82..01663e8 100644
+--- a/resource/ui/huditemeffectmeter.res
++++ b/resource/ui/huditemeffectmeter.res
+@@ -6,7 +6,7 @@
+ 		"visible"			"1"
+ 		"enabled"			"1"
+ 		"xpos"				"c-60"
+-		"ypos"				"c120"
++		"ypos"				"c100"
+ 		"wide"				"120"
+ 		"tall"				"8"
+ 		"MeterFG"			"White"
+diff --git a/resource/ui/huditemeffectmeter_cleaver.res b/resource/ui/huditemeffectmeter_cleaver.res
+index 9030e22..6347c08 100644
+--- a/resource/ui/huditemeffectmeter_cleaver.res
++++ b/resource/ui/huditemeffectmeter_cleaver.res
+@@ -4,6 +4,6 @@
+ {
+ 	"HudItemEffectMeter"
+ 	{
+-		"ypos"				"c110"
++		"ypos"				"c90"
+ 	}
+ }
+diff --git a/resource/ui/huditemeffectmeter_sodapopper.res b/resource/ui/huditemeffectmeter_sodapopper.res
+index bfe5616..bf80913 100644
+--- a/resource/ui/huditemeffectmeter_sodapopper.res
++++ b/resource/ui/huditemeffectmeter_sodapopper.res
+@@ -4,6 +4,6 @@
+ {
+ 	"HudItemEffectMeter"
+ 	{
+-		"ypos"				"c100"
++		"ypos"				"c80"
+ 	}
+ }
 diff --git a/resource/ui/hudmediccharge.res b/resource/ui/hudmediccharge.res
-index 6d1dc6a..628c5a8 100644
+index 6d1dc6a..e097121 100644
 --- a/resource/ui/hudmediccharge.res
 +++ b/resource/ui/hudmediccharge.res
 @@ -22,10 +22,10 @@
@@ -54,7 +145,7 @@ index 6d1dc6a..628c5a8 100644
  		"font"				"Default"
  		"xpos"				"0"
 -		"ypos"				"-1"
-+		"ypos"				"87"
++		"ypos"				"77"
  		"zpos"				"1"
  		"wide"				"120"
  		"tall"				"10"
@@ -80,6 +171,21 @@ index e4c5dba..99a4914 100644
  	}
  	
  	"PlayerStatusClassImage"
+diff --git a/resource/ui/hudplayerhealth.res b/resource/ui/hudplayerhealth.res
+index a361646..a547dfc 100644
+--- a/resource/ui/hudplayerhealth.res
++++ b/resource/ui/hudplayerhealth.res
+@@ -5,8 +5,8 @@
+ 	{
+ 		"ControlName"	"EditablePanel"
+ 		"fieldName"		"HudPlayerHealth"
+-		"xpos"			"c-190"
+-		"ypos"			"c68"
++		"xpos"			"c-170"
++		"ypos"			"c48"
+ 		"zpos"			"2"
+ 		"wide"			"150"
+ 		"tall"			"150"
 diff --git a/resource/ui/targetid.res b/resource/ui/targetid.res
 index 50712f0..116d71d 100644
 --- a/resource/ui/targetid.res
@@ -92,25 +198,56 @@ index 50712f0..116d71d 100644
 \ No newline at end of file
 +}
 diff --git a/scripts/hudanimations_custom.txt b/scripts/hudanimations_custom.txt
-index 83ccf84..b75ccce 100644
+index 83ccf84..35e526f 100644
 --- a/scripts/hudanimations_custom.txt
 +++ b/scripts/hudanimations_custom.txt
+@@ -1,11 +1,11 @@
+ // Bonus Health Pulse
+ event HudHealthBonusPulse
+ {
+-	Animate	HealthBG					BgColor		"Overheal"			Linear 0.0 0.2
+-	Animate	HealthBG					BgColor		"OverhealPulse"		Linear 0.2 0.6
++//	Animate	HealthBG					BgColor		"Overheal"			Linear 0.0 0.2
++//	Animate	HealthBG					BgColor		"OverhealPulse"		Linear 0.2 0.6
+ 
+-//	Animate	PlayerStatusHealthValue		FgColor		"Overheal"			Linear 0.0 0.2
+-//	Animate	PlayerStatusHealthValue		FgColor		"OverhealPulse"		Linear 0.2 0.6
++	Animate	PlayerStatusHealthValue		FgColor		"Overheal"			Linear 0.0 0.2
++	Animate	PlayerStatusHealthValue		FgColor		"OverhealPulse"		Linear 0.2 0.6
+ 
+ 	Animate	GuiPlayerHealth				FgColor		"PositiveValue"		Linear 0.0 0.0
+ 	Animate RedPlayerHealth				FgColor		"PositiveValue"		Linear 0.0 0.0
+@@ -30,11 +30,11 @@ event HudHealthBonusPulseStop
+ // Low Health Pulse
+ event HudHealthDyingPulse
+ {
+-	Animate	HealthBG					BgColor		"LowHealth"			Linear 0.0 0.2
+-	Animate	HealthBG					BgColor		"LowHealthPulse"	Linear 0.2 0.6
++//	Animate	HealthBG					BgColor		"LowHealth"			Linear 0.0 0.2
++//	Animate	HealthBG					BgColor		"LowHealthPulse"	Linear 0.2 0.6
+ 
+-//	Animate	PlayerStatusHealthValue		FgColor		"LowHealth"			Linear 0.0 0.2
+-//	Animate PlayerStatusHealthValue		FgColor		"LowHealthPulse"	Linear 0.2 0.6
++	Animate	PlayerStatusHealthValue		FgColor		"LowHealth"			Linear 0.0 0.2
++	Animate PlayerStatusHealthValue		FgColor		"LowHealthPulse"	Linear 0.2 0.6
+ 
+ 	Animate	GuiPlayerHealth				FgColor		"NegativeValue"		Linear 0.0 0.0
+ 	Animate RedPlayerHealth				FgColor		"HudWhite"			Linear 0.0 0.0
 @@ -59,15 +59,15 @@ event HudHealthDyingPulseStop
  
  event HudLowAmmoPulse
  {
 -	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
 -	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
--
++//	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
++//	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
+ 
 -//	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 -//	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoInReserve				FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 -//	Animate	AmmoNoClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 -//	Animate	AmmoNoClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
-+//	Animate	AmmoBG						BgColor		"LowAmmo"			Linear 0.0 0.2
-+//	Animate	AmmoBG						BgColor		"LowAmmoPulse"		Linear 0.2 0.6
-+
 +	Animate	AmmoInClip					FgColor		"LowAmmo"			Linear 0.0 0.2
 +	Animate	AmmoInClip					FgColor		"LowAmmoPulse"		Linear 0.2 0.6
 +	Animate	AmmoInReserve				FgColor		"LowAmmo"			Linear 0.0 0.2
@@ -121,9 +258,20 @@ index 83ccf84..b75ccce 100644
  	RunEvent HudLowAmmoPulseLoop		0.4
  }
 diff --git a/scripts/hudlayout.res b/scripts/hudlayout.res
-index 8b82314..ed498e5 100644
+index 8b82314..0dec39d 100644
 --- a/scripts/hudlayout.res
 +++ b/scripts/hudlayout.res
+@@ -100,8 +100,8 @@
+ 		"fieldName"			"HudWeaponAmmo"
+ 		"visible"			"1"
+ 		"enabled"			"1"
+-		"xpos"				"c90"
+-		"ypos"				"c93"
++		"xpos"				"c70"
++		"ypos"				"c73"
+ 		"wide"				"110"
+ 		"tall"				"43"
+ 	}
 @@ -151,7 +151,7 @@
  		"visible"			"1"
  		"enabled"			"1"
