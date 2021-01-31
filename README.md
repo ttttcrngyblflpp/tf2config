@@ -121,7 +121,10 @@ same finger, but you don't necessarily need any of this and just use good ol' ES
 able to use WASD, as long as you can find at least 4 buttons that you can press with your pinky. You
 define the buttons that you press with the pinky in `autoexec.cfg`. Define `a0` to be the most
 reachable pinky key (which is almost certainly A for ESDF users and Control (I mean Capslock) for
-WASD users), `a1` to be the next most reachable, etc.
+WASD users), `a1` to be the next most reachable, etc. `t[0-3]` should be defined to be buttons that
+you press with your thumb. This would normally be `space` and `alt`, but may also be any of
+`[ZXCV]`, especially if you shift WASD up one row so that your thumb is able to hit the bottom row
+of keys fairly naturally.
 
 Note that I've only bound two actions to keys pressed by the thumb: crouch and showing the
 scoreboard. The fewer players there are, the more important the scoreboard is to track who's alive,
@@ -159,23 +162,28 @@ Pyro:
 
 ![pyro](img/pyro.png)
 
-The pyro layout is actually just stock... which is weird, but here are the reasons why:
+The pyro layout is motivated by the following:
 
-- Pyro has many combos that it can pull off but all of them require rapid weapon switches:
-  - Powerjack jumping involves switching to melee immediately before jumping, and switching to
-    primary or secondary mid-jump to do damage.
-  - The degreaser's switch speed bonus when paired with the panic attack (and to some degree the
-    stock shotgun as well) allows one to deal damage with "lingering flames" and burst hitscan
-    damage simultaneously.
-  - The three flare guns and the axtinguisher are all activated on burning targets, and combo from
-    lighting someone on fire.
-  As a result of all of this, it's really important to be able to switch between weapons quickly.
-  This means that the only viable way to use slot-and-attack binds is to have `mouse1`, `mouse2` and
-  a keyboard button bound, but the problem with that is needing to airblast with `+attack2`. Thus
-  the compromise is simply the stock layout of three buttons to switch between the weapons, and the
-  two mouse buttons to attack.
-- Pyro can detonator jump, but is also the class that probably benefits the most from bunny hopping,
-  so jump is aliased to a button for det-jumps.
+- Pyro has two weapons that require "click-timing": airblast and shooting the secondary (whether
+  shotgun or one of the flareguns). It might be okay to bind `+attack` to `mouse1` and `+attack2` to
+  `mouse2` and use either the pinky or the scrollwheel to switch weapons, but realistically the
+  scrollwheel is the only option as the degreaser/panic attack/powerjack combo can require upwards
+  of 5+ weapon switchs per second. With optimal play however, the scrollwheel needs to be dedicated
+  to jumping, so the mouse buttons are switch-to-and-attack binds.
+- Shooting flames is bound to `a0`, and alt-fire on a secondary which is used by the detonator is on
+  `a1`.
+- In order to facilitate easier powerjack jumping, switching-to-melee-and-attack is not bound to
+  `a2` as it normally would be, but `t1` (the second-most accessible thumb button) instead. Note
+  that because the state machine sanitizes all states, it's possible to exploit its behavior in
+  certain situations such as holding the flamethrower attack button throughout while switching to
+  melee will result in the powerjack being put away upon release of the button.
+
+If you look in the pyro config, you will see a programmatically-generated state machine that
+redefines the 5 buttons for switch-to-and-attack on the fly. The state machine sanitizes input, and
+will basically ensure that regardless of which combination of keys is pressed at any time, the most
+recently-selected weapon will be drawn, and `+attack` and/or `+attack2` will be sent as appropriate.
+Note in particular that buttons being released changes what the most-recently-selected weapon or
+attack is, and the appropriate commands will be determined and sent by the state machine.
 
 Medic:
 
